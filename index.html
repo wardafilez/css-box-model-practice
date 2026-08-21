@@ -2,53 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Box Model Practice</title>
+    <title>CSS Day 18 - Responsive Units</title>
     <style>
-        /* 1. Puray page ki setting */
+        /* CSS RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
-            padding: 40px;
+            background-color: #eccc68;
+            
+            /* DAY 18: 100vh ka matlab poori screen ki height */
+            height: 100vh; 
+            
+            /* Box ko screen ke bilkul center mein lane ke liye */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* 2. Main Box jis par hum practice karenge */
-        .my-box {
+        /* Responsive Card Box */
+        .responsive-box {
             background-color: white;
-            width: 300px;
             
-            /* --- BOX MODEL PROPERTIES --- */
-            border: 5px solid #ff4757;   /* Lal rang ka border (Deewar) */
-            padding: 20px;               /* Andarooni space (Bubble wrap) */
-            margin-bottom: 30px;         /*豪 Bairooni fasla */
+            /* DAY 18: Fixed px ki jagah 80vw use kiya (Mobile screen par fit aayega) */
+            width: 80vw;
+            max-width: 500px;
             
-            /* Yeh property width ko kharab nahi hone deti */
-            box-sizing: border-box; 
+            /* DAY 18: Padding ke liye rem use kiya */
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* 3. Ek normal button */
-        .my-button {
-            background-color: #2ed573;
-            color: white;
-            border: none;
-            cursor: pointer;
+        h2 {
+            color: #ff4757;
+            /* DAY 18: Capital letter mein convert karna */
+            text-transform: uppercase;
+            /* Aksharon ke beech gap */
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
 
-            /* --- SPACING EXERCISE --- */
-            padding: 12px 24px;          /* Upar-neeche 12px, daayein-baayein 24px */
-            font-size: 16px;
-            border-radius: 5px;
+        p {
+            color: #2f3542;
+            font-size: 1.1rem;
+            /* DAY 18: Lines ke beech ka fasla set karna */
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <!-- Yeh hamara Pehla Box hai -->
-    <div class="my-box">
-        <h3>Day 17: Box Model</h3>
-        <p>Is text ke charo taraf jo khali jagah aapko nazar aa rahi hai, wo padding hai.</p>
+    <div class="responsive-box">
+        <h2>Day 18: CSS Units</h2>
+        <p>Aaj humne seekha ke width ko fixed rakhne ke bajaye 'vw' aur 'vh' kaise use karte hain, aur text ko bariki se kaise style kiya jata hai. Is page ko mobile par kholein ya computer par, yeh khud ko screen ke hisab se adjust kar lega!</p>
     </div>
-
-    <!-- Yeh hamara Dusra Element hai -->
-    <button class="my-button">Click Me</button>
 
 </body>
 </html>
