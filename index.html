@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Box Model Practice</title>
+    <style>
+        /* 1. Puray page ki setting */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            padding: 40px;
+        }
+
+        /* 2. Main Box jis par hum practice karenge */
+        .my-box {
+            background-color: white;
+            width: 300px;
+            
+            /* --- BOX MODEL PROPERTIES --- */
+            border: 5px solid #ff4757;   /* Lal rang ka border (Deewar) */
+            padding: 20px;               /* Andarooni space (Bubble wrap) */
+            margin-bottom: 30px;         /*豪 Bairooni fasla */
+            
+            /* Yeh property width ko kharab nahi hone deti */
+            box-sizing: border-box; 
+        }
+
+        /* 3. Ek normal button */
+        .my-button {
+            background-color: #2ed573;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+            /* --- SPACING EXERCISE --- */
+            padding: 12px 24px;          /* Upar-neeche 12px, daayein-baayein 24px */
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Yeh hamara Pehla Box hai -->
+    <div class="my-box">
+        <h3>Day 17: Box Model</h3>
+        <p>Is text ke charo taraf jo khali jagah aapko nazar aa rahi hai, wo padding hai.</p>
+    </div>
+
+    <!-- Yeh hamara Dusra Element hai -->
+    <button class="my-button">Click Me</button>
+
+</body>
+</html>
